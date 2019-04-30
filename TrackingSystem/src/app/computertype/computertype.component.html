@@ -1,0 +1,52 @@
+<section *ngIf="showList">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2>
+        View Computer Types
+      </h2>
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <tr>
+          <th>Details</th>
+          <th>Id</th>
+          <th>Description</th>
+          <th>Created On</th>
+          <th>Updated On</th>
+        </tr>
+        <tr *ngFor="let computertype of computertypeList">
+          <td><a href="/computertype/{{computertype.id}}">View</a></td>
+          <td>{{ computertype.id }}</td>
+          <td>{{ computertype.description }}</td>
+          <td>{{ computertype.createdon }}</td>
+          <td>{{ computertype.updatedon }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="showSingle">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2>
+        View Computer Type {{ computertype.id }}
+      </h2>
+    </div>
+    <div class="table-responsive">
+      <dl class="row">
+        <dt class="col-sm-3">Id</dt>
+        <dd class="col-sm-9">{{ computertype.id }}</dd>
+
+        <dt class="col-sm-3">Description</dt>
+        <dd class="col-sm-9">{{ computertype.description }}</dd>
+
+        <dt class="col-sm-3">Created at</dt>
+        <dd class="col-sm-9">{{ computertype.createdon }}</dd>
+
+        <dt class="col-sm-3">Updated at</dt>
+        <dd class="col-sm-9">{{ computertype.updatedon }}</dd>
+      </dl>
+    </div>
+  </div>
+</section>

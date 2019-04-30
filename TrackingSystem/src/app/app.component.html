@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="/">IT Inventory Tracking System
+  </a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+
+    <!-- Dropdown for Create -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarnew" data-toggle="dropdown">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        New
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/computertype/create">Computer Type</a>
+      </div>
+    </li>
+    <!-- Dropdown for View-->
+    <li class="nav-item dropdown">
+
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        <i class="fa fa-table" aria-hidden="true"></i>
+        View
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/computertype" routerLinkActive="active">Computer Types</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+<br>
+Use the navigation bar to view Computer Types
+<br>
+
+<router-outlet></router-outlet>
+
